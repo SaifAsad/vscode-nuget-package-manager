@@ -14,14 +14,10 @@ function getErrorMessage(verb: string, projFileFullPath: string): string {
   return `Could not ${verb} the file at ${projFileFullPath}. Please try again.`;
 }
 
-// TODO: Clean this up if possible.
-export default function handleVersionsQuickPick({
-  selectedVersion,
-  selectedPackageName,
-}: {
-  selectedVersion: string;
-  selectedPackageName: string;
-}): Promise<any> | Promise<never> {
+export default function listInstalledPackages(): Promise<any> | Promise<never> {
+  let selectedVersion;
+  let selectedPackageName;
+
   selectedVersion = selectedVersion.startsWith("Latest version")
     ? "*"
     : selectedVersion;

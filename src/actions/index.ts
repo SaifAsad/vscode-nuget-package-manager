@@ -1,7 +1,11 @@
-import { addNuGetPackage } from './add';
-import { removeNuGetPackage } from './remove';
+import { addNuGetPackage } from "./add";
+import { removeNuGetPackage } from "./remove";
+import { updateNuGetPackage } from "./update";
+import { listNuGetPackages } from "./list";
 
 export {
-    addNuGetPackage,
-    removeNuGetPackage
+  addNuGetPackage,
+  removeNuGetPackage,
+  updateNuGetPackage,
+  listNuGetPackages,
 };
